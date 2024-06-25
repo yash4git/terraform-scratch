@@ -27,7 +27,7 @@ resource "aws_s3_bucket" "my-third-bucket" {
   }
 }
 
-# recover state file 
+# recover state file
 
 
 
