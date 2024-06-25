@@ -5,5 +5,6 @@ terraform {
     region         = "ap-south-1"
     encrypt        = true
     profile        = "asmigar"
+    dynamodb_table = "state-lock"
   }
 }

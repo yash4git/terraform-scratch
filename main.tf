@@ -4,7 +4,6 @@ resource "aws_s3_bucket" "my-first-bucket" {
   bucket = "yash-25121995"
 
   tags = {
-    Name        = "My bucket"
     Environment = "Dev"
   }
 }
@@ -13,8 +12,7 @@ resource "aws_s3_bucket" "my-second-bucket" {
   bucket = "yash-25121"
 
   tags = {
-    Name        = "My bucket"
-    Environment = "Dev"
+    Environment = "QA"
   }
 }
 
@@ -22,8 +20,7 @@ resource "aws_s3_bucket" "my-third-bucket" {
   bucket = "yash-251219951234"
 
   tags = {
-    Name        = "My bucket"
-    Environment = "QA"
+    Environment = "Prod"
   }
 }
 
