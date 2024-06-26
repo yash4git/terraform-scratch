@@ -1,29 +1,16 @@
-# # resource "<resource_type>" "<resource_reference_name>"
-resource "aws_s3_bucket" "my-first-bucket" {
-  # resource arguments
-  bucket = "yash-25121995"
 
-  tags = {
-    Environment = "Dev"
-  }
+
+module "yash_s3" {
+   bucket_prefix = var.bucket_prefix_root
+   source = "./modules/s3"
 }
 
-resource "aws_s3_bucket" "my-second-bucket" {
-  bucket = "yash-25121"
 
-  tags = {
-    Environment = "QA"
-  }
+module "sabyasachi_s3" {
+   bucket_prefix = "sabyasachi"
+   source = "./modules/s3"
+  
 }
-
-resource "aws_s3_bucket" "my-third-bucket" {
-  bucket = "yash-251219951234"
-
-  tags = {
-    Environment = "Prod"
-  }
-}
-
 # recover state file
 
 
